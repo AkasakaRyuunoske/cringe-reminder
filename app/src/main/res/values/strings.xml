@@ -16,4 +16,14 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="large_text">
+"Umm, so symmetric and asymmetric cryptography are like different types of ways to keep information safe and stuff. The main difference is that symmetric cryptography uses just one key to both encrypt and decrypt the data, while asymmetric cryptography uses two keys, one for encrypting and another for decrypting.\n\n"
+"With symmetric cryptography, it\'s like sharing a secret code between two people who wanna communicate. They both use the same secret code to lock and unlock the messages. It\'s like, they have a special key and they both know it.\n\n"
+
+"But with asymmetric cryptography, it\'s like having two different keys, kinda like a lock and a key. One key is used to lock the message, and the other key is used to unlock it. It's like, one person has a special key to lock the message, and the other person has a different special key to unlock it.\n\n\n"
+
+"So, yeah, that's like the basic idea. Symmetric uses one key for both encryption and decryption, while asymmetric uses two different keys for that. It\'s all about keeping information safe and secure, you know?\n"
+    </string>
+    <string name="action_settings">Settings</string>
 </resources>
