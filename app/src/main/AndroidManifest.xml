@@ -14,17 +14,22 @@
         android:theme="@style/Theme.Chloe"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.ScrollingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Chloe.NoActionBar"
+            android:label="Info Area:"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
             android:name=".Activities.TheDyingMessageActivity"
             android:exported="false"
             android:label="The Dying Message:"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".Activities.OptionsActivity"
             android:exported="false"
             android:label="@string/title_activity_options"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -35,13 +40,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Activities.TestingAreaActivity" />
-
         <receiver android:name=".Notifications.ReminderBroadcast" />
 
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value=".MainActivity"/>
+            android:value=".MainActivity" />
     </application>
 
 </manifest>
