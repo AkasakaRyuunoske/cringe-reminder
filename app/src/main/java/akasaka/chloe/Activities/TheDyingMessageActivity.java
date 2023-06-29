@@ -77,6 +77,7 @@ public class TheDyingMessageActivity extends AppCompatActivity {
 
         if (notificationCount * 50 == 550){
             localText = text.substring(notificationCount * 50, notificationCount * 50 + 19);
+            the_dying_messageButton.setEnabled(true);
         } else {
             if (notificationCount > 1) {
                 localText = text.substring(notificationCount * 50, (notificationCount + 1) * 50);
@@ -123,6 +124,9 @@ public class TheDyingMessageActivity extends AppCompatActivity {
 
         // Setting up onClock listeners
         the_dying_messageButton.setOnClickListener(view -> {
+
+            the_dying_messageButton.setEnabled(false);
+
             Toast.makeText(this, "The_Dying_Message listener was called", Toast.LENGTH_SHORT).show();
             timeAtButtonClick = System.currentTimeMillis();
 
@@ -190,27 +194,14 @@ public class TheDyingMessageActivity extends AppCompatActivity {
             System.out.println("The_Dying_Message listener was called");
         });
 
-//        eButton.setOnClickListener(view -> {
-//            Toast.makeText(this, "The_Dying_Message listener was called: ", Toast.LENGTH_SHORT).show();
-//
-//            title = "The Dying Message";
-//            text = "Sanman de fuantei na kono sekai \nKakumei wo okoshite yo";
-//
-//            timeAtButtonClick = System.currentTimeMillis();
-//
-//            ReminderBroadcast.generateNotification(title, text, this);
-//            alarmManager.set(AlarmManager.RTC_WAKEUP, timeAtButtonClick, finalPendingIntent);
-//
-//            text = "Nee anata wa utsumo yume wo mite masu ka? \nOwari kake no kono sekai de \nFusaga re ta micchi wo hiraku mono ni naru \n'Messejii' wo ida ita tsurai yo";
-//
-//            timeAtButtonClick += 1000L;
-//
-//            ReminderBroadcast.generateNotification(title, text, this);
-//            alarmManager.set(AlarmManager.RTC_WAKEUP, timeAtButtonClick, finalPendingIntent);
-//
-//
-//            System.out.println("eButton listener was called");
-//        });
+        eButton.setOnClickListener(view -> {
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+
+            System.out.println(prefs.getAll());
+            Toast.makeText(this, "The_Dying_Message listener was called: ", Toast.LENGTH_SHORT).show();
+
+            System.out.println("eButton listener was called");
+        });
 
         coldButton.setOnClickListener(view -> {
             System.out.println("coldButton listener was called");
