@@ -3,32 +3,42 @@
     <PreferenceCategory app:title="Time and Frequency">
 
         <EditTextPreference
-            app:key="signature"
-            app:title="Set time at which you want to be notificated"
+            app:key="time"
+            app:title="Set time at which you want to be notified"
             app:useSimpleSummaryProvider="true" />
 
-        <ListPreference
-            app:defaultValue="reply"
-            app:entries="@array/reply_entries"
-            app:entryValues="@array/reply_values"
-            app:key="reply"
-            app:title="@string/reply_title"
+        <EditTextPreference
+            app:key="day"
+            app:title="Set day(s) at which you want to be notified"
             app:useSimpleSummaryProvider="true" />
 
     </PreferenceCategory>
 
     <PreferenceCategory app:title="Notification">
 
-        <SwitchPreferenceCompat
-            app:key="sync"
-            app:title="@string/sync_title" />
+        <EditTextPreference
+            app:key="header_content"
+            app:title="Set custom header content"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="message_content"
+            app:title="Set custom message content"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="actions"
+            app:title="Set custom actions. If more than one use ; for spacing."
+            app:useSimpleSummaryProvider="true" />
 
         <SwitchPreferenceCompat
-            app:dependency="sync"
-            app:key="attachment"
-            app:summaryOff="@string/attachment_summary_off"
-            app:summaryOn="@string/attachment_summary_on"
-            app:title="@string/attachment_title" />
+            app:key="repeat"
+            app:title="Repeat?" />
+
+        <EditTextPreference
+            app:key="days_in_which_notify"
+            app:title="Set day(s) at which you want to be notified"
+            app:useSimpleSummaryProvider="true" />
 
     </PreferenceCategory>
 
